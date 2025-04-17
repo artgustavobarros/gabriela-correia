@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-brand-500: #053725;
+  --color-neutral-200: #cccccc;
+}
