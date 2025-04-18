@@ -7,8 +7,8 @@ export function Hero() {
   return (
     <div className="relative" id="hero">
       <section className="bg-brand-950 text-white h-[675px] flex items-center overflow-hidden">
-        <Container className="grid grid-cols-12 ">
-          <div className="col-span-5 flex gap-3 justify-center">
+        <Container grid>
+          <div className="col-span-4 flex gap-3 justify-center">
             <span className="block bg-brand-500 min-w-10 h-1 mt-2" />
             <div>
               <h2 className="font-martel font-bold text-4xl">

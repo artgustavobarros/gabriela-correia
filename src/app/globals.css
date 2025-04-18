@@ -5,5 +5,7 @@
   --color-brand-500: #053725;
   --color-brand-950: #01130f;
   --color-neutral-200: #cccccc;
+  --color-neutral-900: #1a1a1a;
+  --color-gray-900: #18181b;
   --font-martel: var(--font-martel);
 }
