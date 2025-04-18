@@ -2,7 +2,7 @@ import { TitleWitTag } from "@/components/title-with-tag";
 import { Container } from "../../layout/container";
 import { Video } from "./video";
 
-export function About() {
+export function Apresentation() {
   return (
     <section>
       <Container grid className="py-40 items-center">
