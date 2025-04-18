@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Martel, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const openSans = Open_Sans({});
+const martel = Martel({ weight: "700", variable: "--font-martel" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${openSans.className} antialiased`}>{children}</body>
+      <body className={`${openSans.className} ${martel.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -3,5 +3,7 @@
 
 @theme {
   --color-brand-500: #053725;
+  --color-brand-950: #01130f;
   --color-neutral-200: #cccccc;
+  --font-martel: var(--font-martel);
 }
