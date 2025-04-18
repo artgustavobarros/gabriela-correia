@@ -7,11 +7,13 @@ export function About() {
     <section className="bg-brand-950">
       <Container className="pt-40 flex flex-col gap-10 items-center">
         <TitleWitTag
-          text="Conheça mais quem irá defender seus interesses e garantir seus direitos."
           orientation="vertical"
           color="inverted"
           className="items-center w-[580px] text-center"
-        />
+        >
+          Conheça mais quem irá defender seus interesses e garantir seus
+          direitos.
+        </TitleWitTag>
         <div className="relative h-[618px] w-full">
           <span className="font-martel text-lg text-white/52 absolute left-40 w-[200px] text-center">
             Conhecedor dos atalhos da justiça

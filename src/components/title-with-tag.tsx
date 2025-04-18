@@ -1,14 +1,15 @@
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
 interface TitleWitTagProps {
-  text: string;
+  children: ReactNode;
   orientation: "vertical" | "horizontal";
   color?: "default" | "inverted";
   className?: string;
 }
 
 export function TitleWitTag({
-  text,
+  children,
   orientation,
   className = "",
   color = "default",
@@ -33,7 +34,7 @@ export function TitleWitTag({
           color === "default" ? "text-neutral-900" : "text-white"
         )}
       >
-        {text}
+        {children}
       </h2>
     </div>
   );

@@ -44,7 +44,7 @@ export function Services() {
       </div>
       <Container className="absolute inset-0 pt-20 flex flex-col gap-14">
         <header className="mx-auto">
-          <TitleWitTag text="Nossos Serviços" orientation="horizontal" />
+          <TitleWitTag orientation="horizontal">Nossos Serviços</TitleWitTag>
         </header>
         <div className="grid grid-cols-12">
           <div className="col-start-2 col-span-4">

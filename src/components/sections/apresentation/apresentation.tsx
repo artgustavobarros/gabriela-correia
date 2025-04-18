@@ -10,10 +10,9 @@ export function Apresentation() {
           <Video />
         </div>
         <div className="col-span-4 flex flex-col gap-4">
-          <TitleWitTag
-            text="Defenda seus interesses, garanta seus direitos."
-            orientation="vertical"
-          />
+          <TitleWitTag orientation="vertical">
+            Defenda seus interesses, garanta seus direitos.
+          </TitleWitTag>
           <p className="text-gray-900">
             No complexo, e muitas vezes injusto sistema de saúde, contar com um
             suporte jurídico especializado pode fazer toda a diferença. Estamos

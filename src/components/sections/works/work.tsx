@@ -7,10 +7,9 @@ export function Work() {
     <section>
       <Container grid className="py-40">
         <div className="col-start-2 col-span-3">
-          <TitleWitTag
-            text="Como funciona o nosso trabalho"
-            orientation="vertical"
-          />
+          <TitleWitTag orientation="vertical">
+            Como funciona o nosso trabalho
+          </TitleWitTag>
         </div>
         <div className="col-start-6 col-span-6 ">
           <WorkList />
