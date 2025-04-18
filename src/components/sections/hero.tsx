@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Container } from "../layout/container";
 import Image from "next/image";
+import { ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <div className="relative">
+    <div className="relative" id="hero">
       <section className="bg-brand-950 text-white h-[675px] flex items-center overflow-hidden">
         <Container className="grid grid-cols-12 ">
           <div className="col-span-5 flex gap-3 justify-center">
@@ -63,6 +64,12 @@ export function Hero() {
         height={70}
         className="absolute bottom-0 left-0 w-full z-[2]"
       />
+      <Link
+        href="#about"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full size-12 bg-white/10 backdrop-blur-md flex items-center justify-center"
+      >
+        <ArrowDown className="text-white size-4" />
+      </Link>
     </div>
   );
 }

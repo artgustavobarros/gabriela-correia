@@ -29,17 +29,19 @@ export function Header() {
   return (
     <header className="bg-black h-20 flex items-center justify-center sticky z-50">
       <Container className="flex justify-between items-center">
-        <h1>
-          <span className="sr-only">
-            Gabriel Cansação Advocacia e Consultoria Jurídica
-          </span>
-          <Image
-            src="/logo.png"
-            alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
-            width={217}
-            height={56}
-          />
-        </h1>
+        <Link href="#hero">
+          <h1>
+            <span className="sr-only">
+              Gabriel Cansação Advocacia e Consultoria Jurídica
+            </span>
+            <Image
+              src="/logo.png"
+              alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
+              width={217}
+              height={56}
+            />
+          </h1>
+        </Link>
         <nav>
           <ul className="text-white flex gap-1">
             {INTERNAL_LINKS.map((item) => (
