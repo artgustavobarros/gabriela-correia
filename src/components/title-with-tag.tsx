@@ -4,18 +4,21 @@ interface TitleWitTagProps {
   text: string;
   orientation: "vertical" | "horizontal";
   color?: "default" | "inverted";
+  className?: string;
 }
 
 export function TitleWitTag({
   text,
   orientation,
+  className = "",
   color = "default",
 }: TitleWitTagProps) {
   return (
     <div
       className={cn(
         "flex gap-4",
-        orientation === "vertical" ? "flex-col" : "items-center"
+        orientation === "vertical" ? "flex-col" : "items-center",
+        className
       )}
     >
       <span
