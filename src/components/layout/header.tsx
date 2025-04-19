@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "./container";
 import Link from "next/link";
+import { DialogHamburger } from "./dialog-hamburger";
 
 const INTERNAL_LINKS = [
   {
@@ -42,7 +43,7 @@ export function Header() {
             />
           </h1>
         </Link>
-        <nav>
+        <nav className="hidden lg:block">
           <ul className="text-white flex gap-1 h-20 items-center">
             {INTERNAL_LINKS.map((item) => {
               return item.href === "#contact" ? (
@@ -70,6 +71,9 @@ export function Header() {
             })}
           </ul>
         </nav>
+        <div className="lg:hidden block">
+          <DialogHamburger links={INTERNAL_LINKS} />
+        </div>
       </Container>
     </header>
   );

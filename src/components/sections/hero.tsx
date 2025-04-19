@@ -5,8 +5,8 @@ import { ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <div className="relative" id="hero">
-      <section className="bg-brand-950 text-white h-[675px] flex items-center overflow-hidden">
+    <div className="relative h-[675px] pt-20" id="hero">
+      <section className="bg-brand-950 text-white flex items-center overflow-hidden h-full">
         <Container grid>
           <div className="col-span-4 flex gap-3 justify-center">
             <span className="block bg-brand-500 min-w-10 h-1 mt-2" />
