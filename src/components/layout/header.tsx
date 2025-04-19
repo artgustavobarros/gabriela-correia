@@ -27,7 +27,7 @@ const INTERNAL_LINKS = [
 
 export function Header() {
   return (
-    <header className="bg-black h-20 flex items-center justify-center sticky z-50">
+    <header className="bg-black h-20 flex items-center justify-center fixed w-full z-50">
       <Container className="flex justify-between items-center">
         <Link href="#hero">
           <h1>
