@@ -18,8 +18,10 @@ export function Hero() {
                 Especialista em Direito Médico e da Saúde
               </p>
               <Link
-                href={"COLOCAR WHATSAPP DEPOIS"}
-                className="bg-brand-500 rounded-full py-3 px-6"
+                href={
+                  "https://wa.me/5582999819612?text=Acabei%20de%20acessar%20teu%20projeto%2C%20achei%20massa"
+                }
+                className="bg-brand-500 rounded-full py-3 px-6 hover:bg-brand-400 duration-300 ease-in-out"
               >
                 Entre em contato
               </Link>
@@ -65,10 +67,10 @@ export function Hero() {
         className="absolute bottom-0 left-0 w-full z-[2]"
       />
       <Link
-        href="#about"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full size-12 bg-white/10 backdrop-blur-md flex items-center justify-center"
+        href="#presentation"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full size-12 bg-white/10 flex items-center justify-center cursor-pointer z-[5] hover:scale-125 duration-500 ease-in-out group"
       >
-        <ArrowDown className="text-white size-4" />
+        <ArrowDown className="text-white size-4 group-hover:text-brand-300 duration-500 ease-in-out" />
       </Link>
     </div>
   );

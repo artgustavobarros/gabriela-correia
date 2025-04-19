@@ -4,7 +4,7 @@ import { TitleWitTag } from "../title-with-tag";
 
 export function About() {
   return (
-    <section className="bg-brand-950">
+    <section className="bg-brand-950" id="about">
       <Container className="pt-40 flex flex-col gap-10 items-center">
         <TitleWitTag
           orientation="vertical"

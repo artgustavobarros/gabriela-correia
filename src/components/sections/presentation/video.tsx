@@ -14,8 +14,8 @@ export function Video() {
   return (
     <div>
       <Dialog>
-        <DialogTrigger>
-          <div className="rounded-md overflow-hidden relative">
+        <DialogTrigger className="cursor-pointer">
+          <div className="rounded-md overflow-hidden relative group hover:scale-110 duration-500 ease-in-out">
             <Image
               src="/video-background.png"
               alt="Video Background"
@@ -24,14 +24,14 @@ export function Video() {
               className="aspect-video object-cover object-top"
             />
             <div className="absolute inset-0 bg-black/40 z-10" />
-            <div className="bg-white size-[72px] rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center">
+            <div className="bg-white size-[72px] rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center z-[11] text-brand-500">
               <Play />
             </div>
           </div>
         </DialogTrigger>
         <DialogContent
           hideCloseButton
-          className="bg-white border-none scale-150 flex items-center justify-center"
+          className="bg-white border-none scale-150 flex items-center justify-center "
         >
           <DialogHeader className="sr-only">
             <DialogTitle>
@@ -54,8 +54,8 @@ export function Video() {
             allowFullScreen
             className="rounded-md"
           />
-          <DialogClose className="absolute rounded-full bg-white/10 backdrop-blur-md size-9 flex items-center justify-center -top-12 -right-12 cursor-pointer">
-            <X className="size-3 text-white" />
+          <DialogClose className="absolute rounded-full bg-white/10 backdrop-blur-md size-9 flex items-center justify-center -top-12 -right-12 cursor-pointer hover:scale-125 duration-500 ease-in-out group">
+            <X className="size-3 text-white group-hover:text-brand-300 duration-500 ease-in-out" />
           </DialogClose>
         </DialogContent>
       </Dialog>

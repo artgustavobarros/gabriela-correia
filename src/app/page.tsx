@@ -1,7 +1,7 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { About } from "@/components/sections/about";
-import { Apresentation } from "@/components/sections/apresentation/apresentation";
+import { Presentation } from "@/components/sections/presentation/presentation";
 import { FAQ } from "@/components/sections/faq/faq";
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services/services";
@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Apresentation />
+        <Presentation />
         <Services />
         <About />
         <Work />
