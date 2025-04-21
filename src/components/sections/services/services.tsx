@@ -33,7 +33,7 @@ const SERVICES_MAP = [
 
 export function Services() {
   return (
-    <section className="max-h-[906px] relative" id="services">
+    <section className="relative" id="services">
       <div className="bg-brand-500 max-w-1/3 rounded-tr-lg">
         <Image
           src="/services/services-background.png"

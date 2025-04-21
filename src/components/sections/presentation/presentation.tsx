@@ -4,8 +4,8 @@ import { Video } from "./video";
 
 export function Presentation() {
   return (
-    <section id="presentation">
-      <Container grid className="py-40 items-center">
+    <section id="presentation" className="py-20">
+      <Container grid className="items-center">
         <div className="col-span-6 col-start-2">
           <Video />
         </div>

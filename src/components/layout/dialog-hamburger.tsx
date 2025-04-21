@@ -23,7 +23,7 @@ export function DialogHamburger({ links }: DialogHamburgerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
-  const { isDesktop, width } = useScreen();
+  const { isDesktop } = useScreen();
 
   function handleClickOnNavLink() {
     setIsOpen(false);

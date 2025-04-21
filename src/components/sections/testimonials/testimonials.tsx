@@ -10,7 +10,7 @@ import { ImageDialog } from "./image-dialog";
 
 export function Testimonials() {
   return (
-    <section className="">
+    <section className="pb-20">
       <Container className="">
         <header className="flex items-end justify-between mb-10">
           <TitleWitTag orientation="vertical">
