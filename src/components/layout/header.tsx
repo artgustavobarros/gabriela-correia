@@ -35,12 +35,14 @@ export function Header() {
             <span className="sr-only">
               Gabriel Cansação Advocacia e Consultoria Jurídica
             </span>
-            <Image
-              src="/logo.png"
-              alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
-              width={217}
-              height={56}
-            />
+            <div className="w-[187px] h-12 md:w-full md:h-auto">
+              <Image
+                src="/logo.png"
+                alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
+                width={217}
+                height={56}
+              />
+            </div>
           </h1>
         </Link>
         <nav className="hidden lg:block">

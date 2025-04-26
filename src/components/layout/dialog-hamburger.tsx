@@ -23,7 +23,7 @@ export function DialogHamburger({ links }: DialogHamburgerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
-  const { isDesktop } = useScreen();
+  const { isMobile, isDesktop } = useScreen();
 
   function handleClickOnNavLink() {
     setIsOpen(false);
@@ -66,7 +66,7 @@ export function DialogHamburger({ links }: DialogHamburgerProps) {
           <Hamburger
             color="white"
             rounded
-            size={32}
+            size={isMobile ? 24 : 32}
             direction="right"
             toggled={isOpen}
             toggle={setIsOpen}
@@ -88,7 +88,7 @@ export function DialogHamburger({ links }: DialogHamburgerProps) {
           className="w-3/4 md:w-1/3 bg-neutral-950 h-full duration-500 ease-in-out group-data-[state=open]:animate-in group-data-[state=closed]:animate-out group-data-[state=open]:slide-in-from-right group-data-[state=closed]:slide-out-to-right"
           ref={navRef}
         >
-          <ul className="p-10 flex flex-col gap-6 ">
+          <ul className="p-10 flex flex-col gap-6 relative h-full">
             {links.map((item) => {
               return item.href === "#contact" ? (
                 <li key={item.href}>
@@ -96,7 +96,7 @@ export function DialogHamburger({ links }: DialogHamburgerProps) {
                     href={
                       "https://wa.me/5582999819612?text=Acabei%20de%20acessar%20teu%20projeto%2C%20achei%20massa"
                     }
-                    className="text-brand-300 border rounded-lg py-2 px-4 font-poppins text-xl hover:text-white-50 duration-500 ease-in-out transition-all hover:bg-brand-500 hover:border-brand-500 fixed bottom-8 right-18"
+                    className="text-brand-300 border rounded-lg py-2 px-4 font-poppins md:text-xl hover:text-white-50 duration-500 ease-in-out transition-all hover:bg-brand-500 hover:border-brand-500 absolute bottom-28 left-1/2 -translate-x-1/2 text-base truncate"
                     onClick={handleClickOnNavLink}
                   >
                     {item.text}

@@ -19,7 +19,7 @@ export function Container({
       className={cn(
         "w-full max-w-11/12 mx-auto",
         className,
-        grid ? "grid grid-cols-12" : ""
+        grid ? "grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12" : ""
       )}
     >
       {children}
