@@ -11,7 +11,7 @@ export function Work() {
             Como funciona o nosso trabalho
           </TitleWitTag>
         </div>
-        <div className="col-start-6 col-span-6 ">
+        <div className="col-start-6 col-span-6">
           <WorkList />
         </div>
       </Container>

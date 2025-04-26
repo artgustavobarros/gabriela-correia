@@ -30,28 +30,25 @@ export function WorkList() {
         const bar = group.querySelector(".bar");
 
         gsap.set(iconAndText, { color: "#e7e7e7" });
-        gsap.set(bar, { backgroundColor: "#e7e7e7" });
+        gsap.set(bar, { height: 0, backgroundColor: "#0f172a" });
 
-        gsap.to(iconAndText, {
-          color: "#0f172a",
-          duration: 0.5,
-          ease: "power2.out",
+        const tl = gsap.timeline({
           scrollTrigger: {
             trigger: group,
             start: "top 80%",
+            end: "bottom center",
             toggleActions: "play none none reverse",
+            scrub: true,
           },
         });
 
-        gsap.to(bar, {
-          backgroundColor: "#0f172a",
+        tl.to(iconAndText, {
+          color: "#0f172a",
           duration: 0.5,
           ease: "power2.out",
-          scrollTrigger: {
-            trigger: group,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
+        }).to(bar, {
+          height: "100%",
+          ease: "power2.out",
         });
       });
     },
@@ -70,7 +67,7 @@ export function WorkList() {
             </section>
             <Conditional condition={!isLast}>
               <span
-                className="bar bg-neutral-100 h-full w-[2px] absolute top-8 left-3 translate-x-1/2"
+                className="bar bg-brand-500 h-full w-[2px] absolute top-8 left-3 translate-x-1/2"
                 role="presentation"
               />
             </Conditional>
