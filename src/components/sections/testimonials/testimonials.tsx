@@ -2,6 +2,7 @@
 import { Container } from "@/components/layout/container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
 import { TitleWitTag } from "@/components/title-with-tag";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -17,7 +18,7 @@ export function Testimonials() {
             Histórias reais. <br />
             Motivação para cumprir minha missão.
           </TitleWitTag>
-          <div className="flex gap-2">
+          <div className="hidden md:flex gap-2">
             <Button className="swiper-button-prev size-8 rounded-full bg-brand-100 cursor-pointer">
               <ChevronLeft className="text-brand-500" />
             </Button>
@@ -27,12 +28,27 @@ export function Testimonials() {
           </div>
         </header>
         <Swiper
-          slidesPerView={4}
-          spaceBetween={32}
+          slidesPerView={1.3}
+          spaceBetween={16}
+          breakpoints={{
+            520: {
+              slidesPerView: 1.8,
+            },
+            640: { slidesPerView: 2 },
+            720: { slidesPerView: 2.3 },
+            768: { slidesPerView: 2.8 },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 32,
+            },
+          }}
           modules={[Navigation, Pagination]}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+          }}
+          pagination={{
+            clickable: true,
           }}
           className="mb-4"
         >
@@ -44,6 +60,7 @@ export function Testimonials() {
               <ImageDialog index={index} />
             </SwiperSlide>
           ))}
+          <div className="testimonials-pagination mt-4 h-14 md:hidden" />
         </Swiper>
       </Container>
     </section>

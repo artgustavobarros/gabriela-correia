@@ -21,3 +21,16 @@
   --font-martel: var(--font-martel);
   --font-poppins: var(--font-poppins);
 }
+
+@layer {
+  .swiper-pagination {
+    @apply md:hidden;
+  }
+
+  .swiper-pagination-bullet {
+    @apply !size-3;
+  }
+  .swiper-pagination-bullet-active {
+    @apply !bg-brand-500;
+  }
+}
