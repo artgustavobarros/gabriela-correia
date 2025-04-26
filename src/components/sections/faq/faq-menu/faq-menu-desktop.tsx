@@ -26,7 +26,7 @@ export function FAQMenuDesktop() {
           <li key={item.text}>
             <Button
               className={cn(
-                "flex gap-4 font-martel text-sm rounded-md text-white-50 border border-brand-500 p-4 items-center h-14 cursor-pointer w-full justify-start hover:bg-brand-500 duration-500 ease-in-out",
+                "flex gap-4 font-martel text-sm rounded-md text-white-50 border border-brand-500 p-4 items-center h-14 cursor-pointer w-full justify-start hover:bg-brand-500 duration-500 ease-in-out whitespace-normal text-left",
                 selectedFaq === item.slug ? "bg-brand-500" : "bg-brand-800"
               )}
               onClick={() => changeFaqList(item.slug)}

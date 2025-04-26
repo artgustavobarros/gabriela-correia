@@ -13,7 +13,7 @@ export function FAQMenuMobile() {
     keyof typeof FAQ_QUESTIONS | null
   >(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const { isTablet } = useScreen();
+  const { isMobile } = useScreen();
 
   function handleSelectFaqList(slug: keyof typeof FAQ_QUESTIONS) {
     setSelectedFaq(slug);
@@ -21,12 +21,12 @@ export function FAQMenuMobile() {
   }
 
   useEffect(() => {
-    if (isTablet) setIsDialogOpen(false);
-  }, [isTablet]);
+    if (isMobile) setIsDialogOpen(false);
+  }, [isMobile]);
 
   return (
     <>
-      <div className="block md:hidden">
+      <div className="block sm:hidden">
         <ul className="flex flex-col gap-4">
           {FAQ_THEMES.map((item) => (
             <li key={item.text} className="w-full">

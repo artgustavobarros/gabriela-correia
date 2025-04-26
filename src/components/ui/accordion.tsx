@@ -10,6 +10,7 @@ import { Conditional } from "../conditional";
 interface AccordionTriggerProps
   extends React.ComponentProps<typeof AccordionPrimitive.Trigger> {
   hideChevron?: boolean;
+  duration?: number;
 }
 
 function Accordion({
@@ -35,6 +36,7 @@ function AccordionTrigger({
   className,
   children,
   hideChevron = false,
+  duration = 200,
   ...props
 }: AccordionTriggerProps) {
   return (
@@ -49,7 +51,11 @@ function AccordionTrigger({
       >
         {children}
         <Conditional condition={!hideChevron}>
-          <ChevronDownIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+          <ChevronDownIcon
+            className={cn(
+              `text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-${duration}`
+            )}
+          />
         </Conditional>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
