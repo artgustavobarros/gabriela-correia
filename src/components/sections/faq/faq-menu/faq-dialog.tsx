@@ -52,7 +52,7 @@ export function FAQDialog({
             <X />
           </DialogClose>
         </header>
-        <ul className="py-8 px-6 flex gap-6 flex-col overflow-scroll">
+        <ul className="py-8 px-6 flex gap-6 flex-col overflow-scroll scrollbar scrollbar-track-transparent scrollbar-thumb-brand-400 scrollbar-thumb-rounded-full">
           {faq.map((item) => (
             <li key={item.question} className="flex flex-col gap-2">
               <h4 className="text-brand-300 font-martel font-bold">
