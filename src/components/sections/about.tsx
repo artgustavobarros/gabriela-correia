@@ -4,8 +4,8 @@ import { TitleWitTag } from "../title-with-tag";
 
 export function About() {
   return (
-    <section className="bg-brand-950" id="about">
-      <Container className="pt-40 flex flex-col gap-10 items-center">
+    <section className="bg-brand-950 aspect-video" id="about">
+      <Container className="pt-10 md:pt-20 lg:pt-40 flex flex-col gap-10 items-center">
         <TitleWitTag
           orientation="vertical"
           color="inverted"
@@ -14,23 +14,23 @@ export function About() {
           Conheça mais quem irá defender seus interesses e garantir seus
           direitos.
         </TitleWitTag>
-        <div className="relative h-[618px] w-full">
-          <span className="font-martel text-lg text-white/52 absolute left-40 w-[200px] text-center">
+        <div className="relative h-[512px] lg:h-[612px] w-full border border-red-500">
+          <span className="font-martel text-sm md:text-lg text-white/52 absolute left-[20%] top-[20%] md:top-[10%] w-[200px] text-center -translate-x-1/2">
             Conhecedor dos atalhos da justiça
           </span>
-          <span className="font-martel text-lg text-white/52 absolute left-80 top-40 w-[260px] text-center">
+          <span className="font-martel text-sm md:text-lg text-white/52 absolute left-[30%] top-[40%] w-[260px] text-center -translate-x-1/2">
             Senso de justiça
           </span>
-          <span className="font-martel text-lg text-white/52 absolute left-30 top-1/2 w-[260px] text-center">
+          <span className="font-martel text-sm md:text-lg text-white/52 absolute left-[15%] top-[60%] w-[260px] text-center -translate-x-1/2">
             Conhecedor do sistema suplementar de saúde
           </span>
-          <span className="font-martel text-lg text-white/52 absolute right-40 w-[260px] text-center">
+          <span className="font-martel text-sm md:text-lg text-white/52 absolute right-[20%] top-[20%] md:top-[10%] w-[260px] text-center translate-x-1/2">
             Sempre em busca de soluções inovadoras
           </span>
-          <span className="font-martel text-lg text-white/52 absolute right-80 top-45 w-[260px] text-center">
+          <span className="font-martel text-sm md:text-lg text-white/52 absolute right-[30%] top-[45%] w-[260px] text-center translate-x-1/2">
             Empático
           </span>
-          <span className="font-martel text-lg text-white/52 absolute right-30 top-1/2 w-[260px] text-center">
+          <span className="font-martel text-sm md:text-lg text-white/52 absolute right-[15%] top-[60%] w-[260px] text-center translate-x-1/2">
             Comunicativo
           </span>
           <Image
@@ -38,7 +38,7 @@ export function About() {
             alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
             width={849}
             height={532}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2]"
           />
         </div>
       </Container>
