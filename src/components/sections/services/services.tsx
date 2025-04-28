@@ -44,7 +44,6 @@ export function Services() {
           <ul className="col-span-full sm:col-start-6 sm:col-span-7 md:col-start-7 md:col-span-5 flex flex-col gap-8">
             {SERVICES.map((item, index) => {
               const isLast = SERVICES.length - index === 1;
-              console.log(isLast);
               return (
                 <li
                   key={item.title}

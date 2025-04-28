@@ -12,9 +12,9 @@ import Image from "next/image";
 
 export function Video() {
   return (
-    <div>
+    <div className="min-w-full">
       <Dialog>
-        <DialogTrigger className="cursor-pointer">
+        <DialogTrigger className="cursor-pointer min-w-full flex items-center justify-center overflow-hidden rounded-lg">
           <div className="rounded-md overflow-hidden relative group hover:scale-110 duration-500 ease-in-out">
             <Image
               src="/video-background.png"
