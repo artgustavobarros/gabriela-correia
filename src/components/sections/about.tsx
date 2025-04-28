@@ -14,7 +14,7 @@ export function About() {
           Conheça mais quem irá defender seus interesses e garantir seus
           direitos.
         </TitleWitTag>
-        <div className="relative h-[512px] lg:h-[612px] w-full border border-red-500">
+        <div className="relative h-[512px] lg:h-[612px] w-full">
           <span className="font-martel text-sm md:text-lg text-white/52 absolute left-[20%] top-[20%] md:top-[10%] w-[200px] text-center -translate-x-1/2">
             Conhecedor dos atalhos da justiça
           </span>
