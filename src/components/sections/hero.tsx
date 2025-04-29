@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 export function Hero() {
   return (
     <div
-      className="relative pt-20 bg-brand-950 min-h-[494px] overflow-hidden"
+      className="relative pt-20 bg-brand-950 min-h-[520px] overflow-hidden"
       id="hero"
     >
       <div className="bg-black/40 w-full h-full absolute inset-0" />
@@ -15,15 +15,22 @@ export function Hero() {
         width={1440}
         height={70}
         alt="footer fx"
-        className="absolute bottom-0"
+        className="absolute bottom-0 z-[10]"
       />
       <Link
         href={"#presentation"}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 size-12 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md hover:scale-115 transition-all duration-500 ease-in-out"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 size-12 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md hover:scale-115 transition-all duration-500 ease-in-out z-[5]"
       >
         <ArrowDown className="text-white" />
       </Link>
-      <Container className="flex pt-10 relative z-[2] flex-col">
+      <Image
+        src="/hero/hero-responsive.png"
+        width={266}
+        height={315}
+        alt="Gabriel Cansação"
+        className="absolute bottom-[-10%] w-full left-[30%] sm:hidden"
+      />
+      <Container className="flex pt-10 relative z-[5] flex-col">
         <div className="flex flex-col gap-4 text-white">
           <div className="flex flex-col gap-4">
             <span className="bg-brand-500 w-8 h-[2px]" />
