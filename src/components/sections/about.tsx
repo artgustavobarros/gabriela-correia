@@ -1,19 +1,20 @@
 import Image from "next/image";
 import { Container } from "../layout/container";
-import { TitleWitTag } from "../title-with-tag";
+import { TitleWithTag } from "../title-with-tag";
 
 export function About() {
   return (
     <section className="bg-brand-950 aspect-video" id="about">
       <Container className="pt-10 md:pt-20 lg:pt-40 flex flex-col gap-10 items-center">
-        <TitleWitTag
+        <TitleWithTag
           orientation="vertical"
-          color="inverted"
+          textColor="text-white"
+          tagBgColor="bg-brand-500"
           className="items-center w-[580px] text-center"
         >
           Conheça mais quem irá defender seus interesses e garantir seus
           direitos.
-        </TitleWitTag>
+        </TitleWithTag>
         <div className="relative h-[512px] lg:h-[612px] w-full">
           <span className="font-martel text-sm md:text-lg text-white/52 absolute left-[20%] top-[20%] md:top-[10%] w-[200px] text-center -translate-x-1/2">
             Conhecedor dos atalhos da justiça

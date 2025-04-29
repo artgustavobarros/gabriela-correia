@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TitleWitTag } from "../../title-with-tag";
+import { TitleWithTag } from "../../title-with-tag";
 import { Container } from "../../layout/container";
 import { ServiceItem } from "./service-item";
 import { SERVICES } from "@/constants/services";
@@ -29,7 +29,13 @@ export function Services() {
       </div>
       <Container className="absolute inset-0 pt-10 lg:pt-20 flex flex-col gap-14">
         <header className="sm:mx-auto">
-          <TitleWitTag orientation="horizontal">Nossos Serviços</TitleWitTag>
+          <TitleWithTag
+            orientation="horizontal"
+            textColor="text-gray-950"
+            tagBgColor="bg-brand-500"
+          >
+            Nossos Serviços
+          </TitleWithTag>
         </header>
         <div className="grid grid-cols-12 h-full">
           <figure className="col-start-2 col-span-5 hidden md:block">

@@ -1,4 +1,4 @@
-import { TitleWitTag } from "@/components/title-with-tag";
+import { TitleWithTag } from "@/components/title-with-tag";
 import { Container } from "../../layout/container";
 import { Video } from "./video";
 
@@ -12,9 +12,13 @@ export function Presentation() {
           </div>
 
           <div className="col-span-6 flex flex-col gap-4 md:col-span-4">
-            <TitleWitTag orientation="vertical">
+            <TitleWithTag
+              orientation="vertical"
+              textColor="text-gray-950"
+              tagBgColor="bg-brand-500"
+            >
               Defenda seus interesses, garanta seus direitos.
-            </TitleWitTag>
+            </TitleWithTag>
             <p className="text-gray-900">
               No complexo, e muitas vezes injusto sistema de saúde, contar com
               um suporte jurídico especializado pode fazer toda a diferença.

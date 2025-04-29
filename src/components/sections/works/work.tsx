@@ -1,6 +1,6 @@
 import { WORKS } from "@/constants/works";
 import { Container } from "../../layout/container";
-import { TitleWitTag } from "../../title-with-tag";
+import { TitleWithTag } from "../../title-with-tag";
 import { WorkList } from "./work-list";
 import { CheckCircle2 } from "lucide-react";
 import { WorkSwiper } from "./work-swiper";
@@ -12,9 +12,13 @@ export function Work() {
       <div className="hidden lg:block">
         <Container grid className="py-40">
           <div className="col-start-2 col-span-3">
-            <TitleWitTag orientation="vertical">
+            <TitleWithTag
+              orientation="vertical"
+              textColor="text-gray-950"
+              tagBgColor="bg-brand-500"
+            >
               Como funciona o nosso trabalho
-            </TitleWitTag>
+            </TitleWithTag>
           </div>
           <div className="col-start-6 col-span-6">
             <WorkList />
@@ -22,9 +26,14 @@ export function Work() {
         </Container>
       </div>
       <Container className="lg:hidden py-20 flex flex-col gap-10">
-        <TitleWitTag orientation="vertical" className="items-center">
+        <TitleWithTag
+          orientation="vertical"
+          className="items-center"
+          textColor="text-gray-950"
+          tagBgColor="bg-brand-500"
+        >
           Como funciona o nosso trabalho
-        </TitleWitTag>
+        </TitleWithTag>
         <ul className="grid-cols-2 gap-16 hidden sm:grid">
           {sortedWorks.map((item) => (
             <li key={item.text} className="flex gap-5">

@@ -2,11 +2,12 @@ import Link from "next/link";
 import { Container } from "../layout/container";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
+import { TitleWithTag } from "../title-with-tag";
 
 export function Hero() {
   return (
     <div
-      className="relative pt-20 bg-brand-950 min-h-[520px] overflow-hidden"
+      className="relative pt-20 bg-brand-950 min-h-[580px] overflow-hidden"
       id="hero"
     >
       <div className="bg-black/40 w-full h-full absolute inset-0" />
@@ -32,12 +33,13 @@ export function Hero() {
       />
       <Container className="flex pt-10 relative z-[5] flex-col">
         <div className="flex flex-col gap-4 text-white">
-          <div className="flex flex-col gap-4">
-            <span className="bg-brand-500 w-8 h-[2px]" />
-            <p className="font-martel font-bold text-2xl">
-              Garantindo seus direitos, protegendo sua integridade
-            </p>
-          </div>
+          <TitleWithTag
+            orientation="vertical"
+            textColor="text-white"
+            tagBgColor="bg-brand-500"
+          >
+            Garantindo seus direitos, protegendo sua integridade
+          </TitleWithTag>
           <p className="text-sm">Especialista em Direito Médico e daa Saúde</p>
           <Link
             href={

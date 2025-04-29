@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { TitleWitTag } from "@/components/title-with-tag";
+import { TitleWithTag } from "@/components/title-with-tag";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -14,10 +14,14 @@ export function Testimonials() {
     <section className="pb-20">
       <Container className="">
         <header className="flex items-end justify-between mb-10">
-          <TitleWitTag orientation="vertical">
+          <TitleWithTag
+            orientation="vertical"
+            textColor="text-gray-950"
+            tagBgColor="bg-brand-500"
+          >
             Histórias reais. <br />
             Motivação para cumprir minha missão.
-          </TitleWitTag>
+          </TitleWithTag>
           <div className="hidden md:flex gap-2">
             <Button className="swiper-button-prev size-8 rounded-full bg-brand-100 cursor-pointer">
               <ChevronLeft className="text-brand-500" />
