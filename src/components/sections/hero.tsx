@@ -6,10 +6,7 @@ import { TitleWithTag } from "../title-with-tag";
 
 export function Hero() {
   return (
-    <div
-      className="relative pt-20 bg-brand-950 min-h-[580px] overflow-hidden"
-      id="hero"
-    >
+    <div className="relative pt-20 bg-brand-950 overflow-hidden" id="hero">
       <div className="bg-black/40 w-full h-full absolute inset-0" />
       <Image
         src="/hero/hero-footer.png"
@@ -25,27 +22,29 @@ export function Hero() {
         <ArrowDown className="text-white" />
       </Link>
       <Image
-        src="/hero/hero-responsive.png"
+        src="/hero/hero-mobile.png"
         width={266}
         height={315}
+        quality={100}
         alt="Gabriel Cansação"
-        className="absolute bottom-0 w-full left-[30%] sm:hidden"
+        className="absolute bottom-0 w-full left-[30%] md:hidden"
         priority
       />
-      <Container className="flex pt-10 relative z-[5] flex-col">
-        <div className="flex flex-col gap-4 text-white sm:flex-row">
-          <div className="block sm:hidden">
+      <Container className="flex relative z-[5] flex-col md:grid grid-cols-8 lg:grid-cols-12 min-h-[580px] ">
+        <div className="flex flex-col gap-4 text-white md:flex-row col-span-4 pt-10 md:pt-20">
+          <div className="block md:hidden">
             <TitleWithTag
               orientation="vertical"
               textColor="text-white"
               tagBgColor="bg-brand-500"
+              className="max-w-[340px]"
             >
               Garantindo seus direitos, protegendo sua integridade
             </TitleWithTag>
           </div>
-          <span className="bg-brand-500 w-8 h-[2px] hidden sm:block mt-2" />
+          <span className="bg-brand-500 w-8 h-[2px] hidden md:block mt-2" />
           <div className="flex flex-col gap-8">
-            <h2 className="font-martel font-bold text-2xl hidden sm:block">
+            <h2 className="font-martel font-bold text-2xl hidden md:block">
               Garantindo seus direitos, protegendo sua integridade
             </h2>
             <p className="text-sm">Especialista em Direito Médico e da Saúde</p>
@@ -58,6 +57,45 @@ export function Hero() {
               Entre em Contato
             </Link>
           </div>
+        </div>
+        <div className="border border-red-500 col-span-4 w-full hidden md:block relative">
+          <Image
+            src="/hero/hero.png"
+            width={400}
+            height={400}
+            quality={100}
+            alt="Gabriel Cansação"
+            className="absolute bottom-0 left-[20%] z-[2]"
+            priority
+          />
+          <Image
+            src="/hero/hero-bg-center.png"
+            width={150}
+            height={400}
+            quality={100}
+            alt="Efeito visual de fundo"
+            role="presentation"
+            className="absolute top-0 left-[50%]"
+            priority
+          />
+          <Image
+            src="/hero/hero-bg-left.png"
+            width={300}
+            height={400}
+            quality={100}
+            alt="Gabriel Cansação imagem opaca à esquerda"
+            className="absolute bottom-[0%] left-[-20%]"
+            priority
+          />
+          <Image
+            src="/hero/hero-bg-right.png"
+            width={240}
+            height={400}
+            quality={100}
+            alt="Gabriel Cansação imagem opaca à direita"
+            className="absolute bottom-[-5%] left-[80%]"
+            priority
+          />
         </div>
       </Container>
     </div>
