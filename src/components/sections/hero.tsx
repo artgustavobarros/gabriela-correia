@@ -31,7 +31,7 @@ export function Hero() {
         priority
       />
       <Container className="flex relative z-[5] flex-col md:grid grid-cols-8 lg:grid-cols-12 min-h-[580px] ">
-        <div className="flex flex-col gap-4 text-white md:flex-row col-span-4 pt-10 md:pt-20">
+        <div className="flex flex-col gap-4 text-white md:flex-row col-span-4 pt-10 md:pt-20 lg:col-span-6">
           <div className="block md:hidden">
             <TitleWithTag
               orientation="vertical"
@@ -58,7 +58,7 @@ export function Hero() {
             </Link>
           </div>
         </div>
-        <div className="border border-red-500 col-span-4 w-full hidden md:block relative">
+        <div className="col-span-4 w-full hidden md:block relative lg:col-span-6 max-w-[400px]">
           <Image
             src="/hero/hero.png"
             width={400}
@@ -68,16 +68,17 @@ export function Hero() {
             className="absolute bottom-0 left-[20%] z-[2]"
             priority
           />
-          <Image
-            src="/hero/hero-bg-center.png"
-            width={150}
-            height={400}
-            quality={100}
-            alt="Efeito visual de fundo"
-            role="presentation"
-            className="absolute top-0 left-[50%]"
-            priority
-          />
+          <div className="absolute top-0 left-[20%] w-[400px] flex items-center justify-center">
+            <Image
+              src="/hero/hero-bg-center.png"
+              width={150}
+              height={400}
+              quality={100}
+              alt="Efeito visual de fundo"
+              role="presentation"
+              priority
+            />
+          </div>
           <Image
             src="/hero/hero-bg-left.png"
             width={300}
