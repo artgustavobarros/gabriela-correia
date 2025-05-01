@@ -31,7 +31,7 @@ export function Hero() {
         priority
       />
       <Container className="flex relative z-[5] flex-col md:grid grid-cols-8 lg:grid-cols-12 min-h-[580px] ">
-        <div className="flex flex-col gap-4 text-white md:flex-row col-span-4 pt-10 md:pt-20 lg:col-span-6">
+        <div className="flex flex-col gap-4 text-white md:flex-row col-span-4 pt-10 md:pt-20 lg:col-span-6 lg:pt-40">
           <div className="block md:hidden">
             <TitleWithTag
               orientation="vertical"
@@ -44,10 +44,10 @@ export function Hero() {
           </div>
           <span className="bg-brand-500 w-8 h-[2px] hidden md:block mt-2" />
           <div className="flex flex-col gap-8">
-            <h2 className="font-martel font-bold text-2xl hidden md:block">
+            <h2 className="font-martel font-bold text-2xl lg:text-4xl hidden md:block">
               Garantindo seus direitos, protegendo sua integridade
             </h2>
-            <p className="text-sm">Especialista em Direito Médico e da Saúde</p>
+            <p className="text-lg">Especialista em Direito Médico e da Saúde</p>
             <Link
               href={
                 "https://wa.me/5582999819612?text=Acabei%20de%20acessar%20teu%20projeto%2C%20achei%20massa"

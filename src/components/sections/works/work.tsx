@@ -11,7 +11,7 @@ export function Work() {
     <section>
       <div className="hidden lg:block">
         <Container grid className="py-40">
-          <div className="col-start-2 col-span-3">
+          <header className="col-start-2 col-span-3">
             <TitleWithTag
               orientation="vertical"
               textColor="text-gray-950"
@@ -19,21 +19,35 @@ export function Work() {
             >
               Como funciona o nosso trabalho
             </TitleWithTag>
-          </div>
+          </header>
           <div className="col-start-6 col-span-6">
             <WorkList />
           </div>
         </Container>
       </div>
       <Container className="lg:hidden py-20 flex flex-col gap-10">
-        <TitleWithTag
-          orientation="vertical"
-          className="items-center"
-          textColor="text-gray-950"
-          tagBgColor="bg-brand-500"
-        >
-          Como funciona o nosso trabalho
-        </TitleWithTag>
+        <header>
+          <div className="hidden md:block">
+            <TitleWithTag
+              orientation="vertical"
+              className="items-center"
+              textColor="text-gray-950"
+              tagBgColor="bg-brand-500"
+            >
+              Como funciona o nosso trabalho
+            </TitleWithTag>
+          </div>
+          <div className="md:hidden">
+            <TitleWithTag
+              orientation="vertical"
+              className=""
+              textColor="text-gray-950"
+              tagBgColor="bg-brand-500"
+            >
+              Como funciona o nosso trabalho
+            </TitleWithTag>
+          </div>
+        </header>
         <ul className="grid-cols-2 gap-16 hidden sm:grid">
           {sortedWorks.map((item) => (
             <li key={item.text} className="flex gap-5">
