@@ -13,7 +13,7 @@ export function Hero() {
         width={1440}
         height={70}
         alt="footer fx"
-        className="absolute bottom-0 z-[10]"
+        className="absolute bottom-0 z-[10] w-full"
       />
       <Link
         href={"#presentation"}
