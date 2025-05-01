@@ -17,7 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html
+      lang="pt-BR"
+      className="scrollbar scrollbar-track-transparent scrollbar-thumb-brand-400 scrollbar-thumb-rounded-full scroll-smooth"
+    >
       <body
         className={`${openSans.className} ${martel.variable} ${poppins.variable} antialiased`}
       >
