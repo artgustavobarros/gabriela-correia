@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/header";
 import { About } from "@/components/sections/about";
 import { Presentation } from "@/components/sections/presentation/presentation";
 import { FAQ } from "@/components/sections/faq/faq";
-import { Hero } from "@/components/sections/hero";
+import { Hero } from "@/components/sections/hero/hero";
 import { Services } from "@/components/sections/services/services";
 import { Testimonials } from "@/components/sections/testimonials/testimonials";
 import { Work } from "@/components/sections/works/work";

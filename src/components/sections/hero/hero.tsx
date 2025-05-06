@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Container } from "../layout/container";
+import { Container } from "../../layout/container";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
-import { TitleWithTag } from "../title-with-tag";
+import { TitleWithTag } from "../../title-with-tag";
 import * as motion from "motion/react-client";
 
 const container = {
@@ -36,7 +36,7 @@ const variants = {
 export function Hero() {
   return (
     <motion.div
-      className="relative pt-20 bg-brand-950 overflow-hidden"
+      className="relative pt-20 bg-brand-950 overflow-hidden h-[600px] md:h-[745px]"
       id="hero"
       variants={container}
       initial="hidden"
@@ -70,18 +70,22 @@ export function Hero() {
           <ArrowDown className="text-white" />
         </Link>
       </motion.div>
-      <Image
-        src="/hero/hero-mobile.png"
-        width={266}
-        height={315}
-        quality={100}
-        alt="Gabriel Cansação"
-        className="absolute bottom-0 w-full left-[30%] md:hidden"
-        priority
-      />
-
-      <Container className="flex relative flex-col md:grid grid-cols-8 lg:grid-cols-12 min-h-[580px] ">
-        <div className="flex flex-col gap-4 text-white md:flex-row col-span-4 pt-10 md:pt-20 lg:col-span-6 lg:pt-40">
+      <motion.figure
+        className="absolute bottom-0 left-[30%] md:hidden w-full"
+        variants={variants.opacity}
+      >
+        <Image
+          src="/hero/hero-mobile.png"
+          width={266}
+          height={315}
+          quality={100}
+          alt="Gabriel Cansação"
+          className="w-full"
+          priority
+        />
+      </motion.figure>
+      <Container className="relative h-full w-full">
+        <div className="flex flex-col gap-4 text-white md:flex-row pt-10 md:pt-20 lg:pt-40 absolute max-w-[430px] z-10">
           <div className="block md:hidden">
             <TitleWithTag
               orientation="vertical"
@@ -125,47 +129,35 @@ export function Hero() {
           </motion.div>
         </div>
         <motion.div
-          className="col-span-4 w-full hidden md:block relative lg:col-span-6 max-w-[400px]"
+          className="ml-auto w-full hidden md:block h-full"
           variants={variants.opacity}
         >
-          <figure className="absolute top-0 left-[20%] w-[400px] flex items-center justify-center">
-            <Image
-              src="/hero/hero-bg-center.png"
-              width={150}
-              height={400}
-              quality={100}
-              alt="Efeito visual de fundo"
-              role="presentation"
-              priority
-            />
-          </figure>
           <Image
             src="/hero/hero.png"
-            width={400}
-            height={400}
+            width={541}
+            height={759}
             quality={100}
             alt="Gabriel Cansação"
             priority
-            className="absolute bottom-0 left-[20%] z-[2]"
+            className="absolute bottom-0 right-0 z-[2]"
           />
-
           <Image
             src="/hero/hero-bg-left.png"
-            width={300}
-            height={400}
+            width={461}
+            height={588}
             quality={100}
             alt="Gabriel Cansação imagem opaca à esquerda"
             priority
-            className="absolute bottom-[0%] left-[-20%]"
+            className="absolute -bottom-8 right-80 opacity-50"
           />
           <Image
             src="/hero/hero-bg-right.png"
-            width={240}
-            height={400}
+            width={371}
+            height={690}
             quality={100}
             alt="Gabriel Cansação imagem opaca à direita"
             priority
-            className="absolute bottom-[-5%] left-[80%]"
+            className="absolute -bottom-8 -right-30"
           />
         </motion.div>
       </Container>

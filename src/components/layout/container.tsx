@@ -17,7 +17,7 @@ export function Container({
   return (
     <Component
       className={cn(
-        "w-full mx-auto container max-w-7xl px-6 md:px-10 lg:px-5 xl:px-0",
+        "w-full mx-auto container max-w-[1216px] px-6 md:px-10 lg:px-5 xl:px-0",
         className,
         grid ? "grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12" : ""
       )}
