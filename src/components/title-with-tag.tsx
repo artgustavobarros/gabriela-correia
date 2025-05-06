@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
+import * as motion from "motion/react-client";
+import { Variants } from "motion/react";
 
 interface TitleWithTagProps {
   children: ReactNode;
@@ -7,6 +9,8 @@ interface TitleWithTagProps {
   textColor?: string;
   tagBgColor?: string;
   className?: string;
+  tagVariants?: Variants;
+  textVariants?: Variants;
 }
 
 export function TitleWithTag({
@@ -15,6 +19,8 @@ export function TitleWithTag({
   className = "",
   tagBgColor = "",
   textColor = "",
+  tagVariants = {},
+  textVariants = {},
 }: TitleWithTagProps) {
   return (
     <div
@@ -24,10 +30,16 @@ export function TitleWithTag({
         className
       )}
     >
-      <span className={cn("h-[2px] w-10 block", tagBgColor)} />
-      <h2 className={cn("text-2xl font-martel font-bold", textColor)}>
+      <motion.span
+        className={cn("h-[2px] w-10 block", tagBgColor)}
+        variants={tagVariants}
+      />
+      <motion.h2
+        className={cn("text-2xl font-martel font-bold", textColor)}
+        variants={textVariants}
+      >
         {children}
-      </h2>
+      </motion.h2>
     </div>
   );
 }

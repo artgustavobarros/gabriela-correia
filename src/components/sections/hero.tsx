@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Container } from "../../layout/container";
+import { Container } from "../layout/container";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
-import { TitleWithTag } from "../../title-with-tag";
+import { TitleWithTag } from "../title-with-tag";
 import * as motion from "motion/react-client";
 
 const container = {
@@ -92,6 +92,8 @@ export function Hero() {
               textColor="text-white"
               tagBgColor="bg-brand-500"
               className="max-w-[340px]"
+              tagVariants={variants.left}
+              textVariants={variants.down}
             >
               Garantindo seus direitos, protegendo sua integridade
             </TitleWithTag>
