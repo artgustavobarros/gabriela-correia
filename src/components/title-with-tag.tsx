@@ -31,11 +31,11 @@ export function TitleWithTag({
       )}
     >
       <motion.span
-        className={cn("h-[2px] w-10 block", tagBgColor)}
+        className={cn("h-[3px] w-10 block", tagBgColor)}
         variants={tagVariants}
       />
       <motion.h2
-        className={cn("text-2xl font-martel font-bold", textColor)}
+        className={cn("text-3xl font-martel font-bold", textColor)}
         variants={textVariants}
       >
         {children}

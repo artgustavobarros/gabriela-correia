@@ -24,7 +24,7 @@ export function Video() {
               className="aspect-video object-cover object-top"
             />
             <div className="absolute inset-0 bg-black/40 z-10" />
-            <div className="bg-white size-[72px] rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center z-[11] text-brand-500">
+            <div className="bg-white/10 backdrop-blur-md size-[72px] rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center z-[11] text-white group-hover:text-brand-500 duration-300 transition-all">
               <Play />
             </div>
           </div>

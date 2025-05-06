@@ -65,9 +65,9 @@ export function Hero() {
       >
         <Link
           href={"#presentation"}
-          className="size-12 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md hover:scale-115 transition-all duration-500 ease-in-out cursor-pointer"
+          className="size-12 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md hover:scale-115 transition-all duration-500 ease-in-out cursor-pointer group"
         >
-          <ArrowDown className="text-white" />
+          <ArrowDown className="text-white group-hover:text-brand-500 duration-500 transition-all" />
         </Link>
       </motion.div>
       <motion.figure
@@ -99,7 +99,7 @@ export function Hero() {
             </TitleWithTag>
           </div>
           <motion.span
-            className="bg-brand-500 w-8 h-[2px] hidden md:block mt-2"
+            className="bg-brand-500 w-20 h-[2px] hidden md:block mt-3"
             variants={variants.left}
           />
           <motion.div
