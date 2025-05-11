@@ -11,7 +11,7 @@ export function Work() {
     <section>
       <div className="hidden lg:block">
         <Container grid className="py-40">
-          <header className="col-start-2 col-span-3 border border-red-500">
+          <header className="col-start-2 col-span-3">
             <TitleWithTag
               orientation="vertical"
               textColor="text-gray-950"
