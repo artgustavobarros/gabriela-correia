@@ -11,11 +11,12 @@ export function Work() {
     <section>
       <div className="hidden lg:block">
         <Container grid className="py-40">
-          <header className="col-start-2 col-span-3">
+          <header className="col-start-2 col-span-3 border border-red-500">
             <TitleWithTag
               orientation="vertical"
               textColor="text-gray-950"
               tagBgColor="bg-brand-500"
+              className="sticky top-28"
             >
               Como funciona o nosso trabalho
             </TitleWithTag>
