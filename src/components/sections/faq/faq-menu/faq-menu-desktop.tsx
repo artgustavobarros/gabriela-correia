@@ -10,6 +10,23 @@ import { FAQ_QUESTIONS, FAQ_THEMES } from "@/constants/faq";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "motion/react";
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const items = {
+  down: {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  },
+};
 
 export function FAQMenuDesktop() {
   const [selectedFaq, setSelectedFaq] =
@@ -37,7 +54,13 @@ export function FAQMenuDesktop() {
           </li>
         ))}
       </ul>
-      <div className="col-start-6 col-span-4">
+      <motion.div
+        className="col-start-6 col-span-4"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.6 }}
+      >
         <Accordion type="single" collapsible>
           {FAQ_QUESTIONS[selectedFaq].map((item, index) => {
             const isFirst = index === 0;
@@ -47,14 +70,16 @@ export function FAQMenuDesktop() {
                 value={item.question}
                 className="border-brand-900"
               >
-                <AccordionTrigger
-                  className={cn(
-                    "data-[state=open]:text-brand-300 data-[state=open]:font-bold font-martel text-xl hover:no-underline text-white-50 hover:text-brand-300 [&>svg]:text-brand-500 [&>svg]:size-8 [&[data-state=open]>svg]:text-white [&[data-state=open]>svg]:bg-brand-500 [&[data-state=open]>svg]:rounded-full [&>svg]:p-1",
-                    isFirst ? "pt-0" : ""
-                  )}
-                >
-                  {item.question}
-                </AccordionTrigger>
+                <motion.div variants={items.down}>
+                  <AccordionTrigger
+                    className={cn(
+                      "data-[state=open]:text-brand-300 data-[state=open]:font-bold font-martel text-xl hover:no-underline text-white-50 hover:text-brand-300 [&>svg]:text-brand-500 [&>svg]:size-8 [&[data-state=open]>svg]:text-white [&[data-state=open]>svg]:bg-brand-500 [&[data-state=open]>svg]:rounded-full [&>svg]:p-1 cursor-pointer",
+                      isFirst ? "pt-0" : ""
+                    )}
+                  >
+                    {item.question}
+                  </AccordionTrigger>
+                </motion.div>
                 <AccordionContent className="text-neutral-200 text-base">
                   {item.answer}
                 </AccordionContent>
@@ -62,7 +87,7 @@ export function FAQMenuDesktop() {
             );
           })}
         </Accordion>
-      </div>
+      </motion.div>
     </div>
   );
 }
