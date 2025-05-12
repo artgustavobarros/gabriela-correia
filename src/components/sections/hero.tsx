@@ -79,7 +79,7 @@ export function Hero() {
           width={266}
           height={315}
           quality={100}
-          alt="Gabriel Cansação"
+          alt="Gabriela Correia"
           className="w-full"
           priority
         />
@@ -139,7 +139,7 @@ export function Hero() {
             width={541}
             height={759}
             quality={100}
-            alt="Gabriel Cansação"
+            alt="Gabriela Correia"
             priority
             className="absolute bottom-0 right-0 z-[2]"
           />
@@ -148,7 +148,7 @@ export function Hero() {
             width={461}
             height={588}
             quality={100}
-            alt="Gabriel Cansação imagem opaca à esquerda"
+            alt="Gabriela Correia imagem opaca à esquerda"
             priority
             className="absolute -bottom-8 right-80 opacity-50"
           />
@@ -157,7 +157,7 @@ export function Hero() {
             width={371}
             height={690}
             quality={100}
-            alt="Gabriel Cansação imagem opaca à direita"
+            alt="Gabriela Correia imagem opaca à direita"
             priority
             className="absolute -bottom-8 -right-30"
           />

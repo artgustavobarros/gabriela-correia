@@ -58,12 +58,12 @@ export function Header() {
             <Link href="#hero">
               <h1>
                 <span className="sr-only">
-                  Gabriel Cansação Advocacia e Consultoria Jurídica
+                  Gabriela Correia Advocacia e Consultoria Jurídica
                 </span>
                 <div className="w-[187px] h-12 md:w-full md:h-auto">
                   <Image
                     src="/logo.png"
-                    alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
+                    alt="Gabriela Correia Advocacia e Consultoria Jurídica"
                     width={217}
                     height={56}
                   />

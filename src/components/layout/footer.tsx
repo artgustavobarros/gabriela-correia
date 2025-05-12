@@ -11,7 +11,7 @@ export function Footer() {
         <div className="flex justify-between">
           <Image
             src="/logo-inverted-color.png"
-            alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
+            alt="Gabriela Correia Advocacia e Consultoria Jurídica"
             width={217}
             height={56}
             className="hidden sm:block"

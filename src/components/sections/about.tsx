@@ -50,7 +50,7 @@ export function About() {
           </span>
           <Image
             src="/about/about.png"
-            alt="Gabriel Cansação Advocacia e Consultoria Jurídica"
+            alt="Gabriela Correia Advocacia e Consultoria Jurídica"
             width={849}
             height={532}
             className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2]"

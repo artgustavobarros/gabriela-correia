@@ -89,9 +89,9 @@ export const FAQ_QUESTIONS = {
     },
     {
       question:
-        "Quais são os benefícios de ter um advogado especializado em direito médico?",
+        "Quais são os benefícios de ter um advogada especializado em direito médico?",
       answer:
-        "Um advogado especializado em direito médico entende as nuances da profissão e pode oferecer uma defesa mais eficaz, além de ajudar a prevenir problemas legais antes que eles aconteçam.",
+        "Um advogada especializado em direito médico entende as nuances da profissão e pode oferecer uma defesa mais eficaz, além de ajudar a prevenir problemas legais antes que eles aconteçam.",
     },
   ],
 };

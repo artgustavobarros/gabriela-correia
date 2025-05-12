@@ -9,22 +9,22 @@ const poppins = Poppins({ weight: "400", variable: "--font-poppins" });
 export const metadata: Metadata = {
   metadataBase: new URL("https://localhost:3000"),
   title:
-    "Gabriel Cansanção - Advogado Especialista em Direito Médico e da Saúde.",
+    "Gabriela Correia - Advogada Especialista em Direito Médico e da Saúde.",
   description:
-    "Gabriel Cansanção é um Advogado Especialista em Direito Médico e da Saúde, oferecendo consultoria jurídica personalizada e representação em litígios.",
+    "Gabriela Correia é uma Advogada Especialista em Direito Médico e da Saúde, oferecendo consultoria jurídica personalizada e representação em litígios.",
   openGraph: {
     title:
-      "Gabriel Cansanção - Advogado Especialista em Direito Médico e da Saúde.",
+      "Gabriela Correia - Advogada Especialista em Direito Médico e da Saúde.",
     description:
-      "Gabriel Cansanção é um Advogado Especialista em Direito Médico e da Saúde, oferecendo consultoria jurídica personalizada e representação em litígios.",
+      "Gabriela Correia é uma Advogada Especialista em Direito Médico e da Saúde, oferecendo consultoria jurídica personalizada e representação em litígios.",
     url: "https://localhost:3000/",
-    siteName: "Gabriel Cansanção",
+    siteName: "Gabriela Correia",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Gabriel Cansanção - Advogado Especialista em Direito Médico e da Saúde",
+        alt: "Gabriela Correia - Advogada Especialista em Direito Médico e da Saúde",
       },
     ],
     locale: "pt_BR",

@@ -43,7 +43,7 @@ export function Services() {
     <section className="relative pb-20" id="services">
       <Image
         src="/services/services.png"
-        alt="Gabriel Cansação"
+        alt="Gabriela Correia"
         width={285}
         height={387}
         className="rounded-lg absolute top-[20%] hidden sm:block md:hidden w-1/3"
@@ -104,7 +104,7 @@ export function Services() {
           >
             <Image
               src="/services/services.png"
-              alt="Gabriel Cansação"
+              alt="Gabriela Correia"
               width={384}
               height={520}
               className="rounded-lg w-2/3"

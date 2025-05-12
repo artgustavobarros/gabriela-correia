@@ -35,11 +35,11 @@ export function Video() {
         >
           <DialogHeader className="sr-only">
             <DialogTitle>
-              Gabriel Cansação Advocacia e Consultoria Jurídica vídeo de
+              Gabriela Correia Advocacia e Consultoria Jurídica vídeo de
               exibição
             </DialogTitle>
             <DialogDescription>
-              Gabriel Cansação Advocacia e Consultoria Jurídica vídeo de
+              Gabriela Correia Advocacia e Consultoria Jurídica vídeo de
               exibição
             </DialogDescription>
           </DialogHeader>
