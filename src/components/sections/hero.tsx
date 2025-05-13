@@ -4,41 +4,17 @@ import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import { TitleWithTag } from "../title-with-tag";
 import * as motion from "motion/react-client";
-
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const variants = {
-  down: {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  },
-  top: {
-    hidden: { opacity: 0, y: -20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  },
-  left: {
-    hidden: { opacity: 0, x: -20 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.6 } },
-  },
-  opacity: {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
-  },
-};
+import {
+  staggerChildrens,
+  staggerContainer,
+} from "@/constants/animations/animations";
 
 export function Hero() {
   return (
     <motion.div
       className="relative pt-20 bg-brand-950 overflow-hidden h-[600px] md:h-[745px]"
       id="hero"
-      variants={container}
+      variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
@@ -61,7 +37,7 @@ export function Hero() {
       </motion.figure>
       <motion.div
         className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[5]"
-        variants={variants.top}
+        variants={staggerChildrens.toTop}
       >
         <Link
           href={"#presentation"}
@@ -72,7 +48,7 @@ export function Hero() {
       </motion.div>
       <motion.figure
         className="absolute bottom-0 left-[30%] md:hidden w-full"
-        variants={variants.opacity}
+        variants={staggerChildrens.fromOpacity}
       >
         <Image
           src="/hero/hero-mobile.png"
@@ -92,33 +68,27 @@ export function Hero() {
               textColor="text-white"
               tagBgColor="bg-brand-500"
               className="max-w-[340px]"
-              tagVariants={variants.left}
-              textVariants={variants.down}
+              tagVariants={staggerChildrens.fromLeft}
+              textVariants={staggerChildrens.toDown}
             >
               Garantindo seus direitos, protegendo sua integridade
             </TitleWithTag>
           </div>
           <motion.span
             className="bg-brand-500 w-20 h-[2px] hidden md:block mt-3"
-            variants={variants.left}
+            variants={staggerChildrens.fromLeft}
           />
-          <motion.div
-            className="flex flex-col gap-8"
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
+          <div className="flex flex-col gap-8">
             <motion.h2
               className="font-martel font-bold text-2xl lg:text-4xl hidden md:block"
-              variants={variants.down}
+              variants={staggerChildrens.toDown}
             >
               Garantindo seus direitos, protegendo sua integridade
             </motion.h2>
-            <motion.p className="text-lg" variants={variants.down}>
+            <motion.p className="text-lg" variants={staggerChildrens.toDown}>
               Especialista em Direito Médico e da Saúde
             </motion.p>
-            <motion.div variants={variants.down}>
+            <motion.div variants={staggerChildrens.toDown}>
               <Link
                 href={
                   "https://wa.me/5582999819612?text=Acabei%20de%20acessar%20teu%20projeto%2C%20achei%20massa"
@@ -128,11 +98,11 @@ export function Hero() {
                 Entre em Contato
               </Link>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
         <motion.div
           className="ml-auto w-full hidden md:block h-full"
-          variants={variants.opacity}
+          variants={staggerChildrens.fromOpacity}
         >
           <Image
             src="/hero/hero.png"
