@@ -110,7 +110,7 @@ export function Hero() {
             quality={100}
             alt="Gabriela Correia"
             priority
-            className="absolute inset-0 z-[2] w-full h-auto"
+            className="absolute z-[2] w-full h-auto object-cover"
           />
         </motion.figure>
       </Container>

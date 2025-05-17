@@ -103,7 +103,7 @@ export function About() {
             alt="Gabriela Correia Advocacia e Consultoria Jurídica"
             width={849}
             height={532}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2]"
+            className="absolute w-full bottom-0 left-1/2 -translate-x-1/2 z-[2]"
           />
         </div>
       </Container>
