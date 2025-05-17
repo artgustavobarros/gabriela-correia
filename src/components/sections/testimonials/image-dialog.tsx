@@ -16,7 +16,7 @@ export function ImageDialog({ index }: { index: number }) {
       <DialogTrigger className="cursor-pointer">
         <div className="relative max-h-[400px] group rounded-lg">
           <Image
-            src={`/testimonials/depoimento-${index + 1}.png`}
+            src={`/testimonials/depoimentos-${index + 1}.jpg`}
             alt={`Depoimento número ${index + 1}`}
             width={300}
             height={400}
@@ -38,7 +38,7 @@ export function ImageDialog({ index }: { index: number }) {
           }`}</DialogDescription>
         </DialogHeader>
         <Image
-          src={`/testimonials/depoimento-${index + 1}.png`}
+          src={`/testimonials/depoimentos-${index + 1}.jpg`}
           alt={`Depoimento número ${index + 1}`}
           width={300}
           height={400}

@@ -41,7 +41,7 @@ const items = {
 
 export function About() {
   const ref = useRef(null);
-  const MotionImage = motion(Image);
+  const MotionImage = motion.create(Image);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],

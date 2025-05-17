@@ -100,38 +100,19 @@ export function Hero() {
             </motion.div>
           </div>
         </div>
-        <motion.div
+        <motion.figure
           className="ml-auto w-full hidden md:block h-full"
           variants={staggerChildrens.fromOpacity}
         >
           <Image
             src="/hero/hero.png"
-            width={541}
-            height={759}
+            fill
             quality={100}
             alt="Gabriela Correia"
             priority
-            className="absolute bottom-0 right-0 z-[2]"
+            className="absolute inset-0 z-[2] w-full h-auto"
           />
-          <Image
-            src="/hero/hero-bg-left.png"
-            width={461}
-            height={588}
-            quality={100}
-            alt="Gabriela Correia imagem opaca à esquerda"
-            priority
-            className="absolute -bottom-8 right-80 opacity-50"
-          />
-          <Image
-            src="/hero/hero-bg-right.png"
-            width={371}
-            height={690}
-            quality={100}
-            alt="Gabriela Correia imagem opaca à direita"
-            priority
-            className="absolute -bottom-8 -right-30"
-          />
-        </motion.div>
+        </motion.figure>
       </Container>
     </motion.div>
   );

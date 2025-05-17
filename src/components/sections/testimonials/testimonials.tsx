@@ -103,7 +103,7 @@ export function Testimonials() {
           }}
           className="mb-4"
         >
-          {Array.from({ length: 7 }).map((_, index) => (
+          {Array.from({ length: 8 }).map((_, index) => (
             <SwiperSlide
               key={index}
               className="max-h-[400px] rounded-lg overflow-hidden"

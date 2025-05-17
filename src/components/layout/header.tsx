@@ -3,6 +3,10 @@ import { Container } from "./container";
 import Link from "next/link";
 import { DialogHamburger } from "./dialog-hamburger";
 import * as motion from "motion/react-client";
+import {
+  staggerChildrens,
+  staggerContainer,
+} from "@/constants/animations/animations";
 
 const INTERNAL_LINKS = [
   {
@@ -44,17 +48,17 @@ const items = {
 export function Header() {
   return (
     <motion.div
-      variants={container}
+      variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
     >
       <motion.header
         className="bg-black h-20 flex items-center justify-center fixed w-full z-50"
-        variants={items}
+        variants={staggerChildrens.toTop}
       >
         <Container className="flex justify-between items-center">
-          <motion.div variants={items}>
+          <motion.div variants={staggerChildrens.toTop}>
             <Link href="#hero">
               <h1>
                 <span className="sr-only">
@@ -75,7 +79,11 @@ export function Header() {
             <ul className="text-white flex gap-1 h-20 items-center">
               {INTERNAL_LINKS.map((item, index) => {
                 return item.href === "#contact" ? (
-                  <motion.li key={item.href} className="" variants={items}>
+                  <motion.li
+                    key={item.href}
+                    className=""
+                    variants={staggerChildrens.toTop}
+                  >
                     <Link
                       href={
                         "https://wa.me/5582999819612?text=Acabei%20de%20acessar%20teu%20projeto%2C%20achei%20massa"
@@ -105,7 +113,10 @@ export function Header() {
               })}
             </ul>
           </nav>
-          <motion.div className="lg:hidden block" variants={items}>
+          <motion.div
+            className="lg:hidden block"
+            variants={staggerChildrens.toTop}
+          >
             <DialogHamburger links={INTERNAL_LINKS} />
           </motion.div>
         </Container>
